@@ -61,7 +61,7 @@ def recognize_documents_with_gemini(images: list, country: str) -> dict | None:
             HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
         }
         # ИСПРАВЛЕНО: Используем существующую модель
-        model = genai.GenerativeModel('gemini-1.5-flash', safety_settings=safety_settings)
+        model = genai.GenerativeModel('gemini-2.5-flash', safety_settings=safety_settings)
 
         if country == 'РФ':
             prompt = '''
